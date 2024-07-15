@@ -22,6 +22,7 @@ mi =0
 se =0
 
 flagSound = False
+flagSoundEnd= 0;
 def reloj(h,m,s): 
 	canvas.create_oval(50,50,350,350, fill='black', outline='white', width=6, activeoutline='gray', activefill='gray12')
 	numeros = [11,10,9,8,7,6,5,4,3,2,1,12]
@@ -39,11 +40,17 @@ def reloj(h,m,s):
 
 def eventSounds(h,m,s):
 	global flagSound
+	global flagSoundEnd
 	if not flagSound:
-		if(m==3):#if is miising one minuto prepare to sound
-			print("Init Sound at minute")
+		if(m==18):#if is miising one minuto prepare to sound
+			print("Init Sound at minute ",m)
 			flagSound=True
-			#winsound.PlaySound("bell1",winsound.SND_FILENAME)
+			flagSoundEnd=m+1; #5 is dutarion of sound
+			winsound.PlaySound("assets/bell1.wav",winsound.SND_FILENAME)
+	elif flagSound:
+		if m>=flagSoundEnd:
+			flagSound=False
+			print("Stop Sound at minute ",m)
 
 def tiempo():
 	global hr, mi, se	
