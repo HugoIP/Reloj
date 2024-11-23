@@ -55,7 +55,7 @@ def eventSounds(h,m,s):
 		if(track!="No"):
 			#if is miising one minuto prepare to sound
 			flagSound=True
-			flagSoundEnd=m+2; #5 is dutarion of sound
+			flagSoundEnd=m+6; #5 is dutarion of sound
 			#Start extrern audio system
 			#call init external sound system
 			hardwareOn()
@@ -141,7 +141,7 @@ def timeCondition(h,m,s):
 	#every half hour
 	#check thas not is rest time
 	if((h>=4) and h<22):
-		if(m==47):
+		if(m==30):
 			answer ="HALF.mp3"
 	return answer
 
