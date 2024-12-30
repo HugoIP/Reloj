@@ -5,8 +5,9 @@ void setup() {
   //Reloj Monumental Santa Catarina Villanueva
   //Puerto serial
   Serial.begin(9600);
-  //Configurar puerto 13
+  //Configurar puerto 8
   pinMode(pinLed,OUTPUT);
+  //apago el pin
   digitalWrite(pinLed, HIGH);
 }
 
