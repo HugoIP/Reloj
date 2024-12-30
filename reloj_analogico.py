@@ -55,7 +55,7 @@ def eventSounds(h,m,s):
 		if(track!="No"):
 			#if is miising one minuto prepare to sound
 			flagSound=True
-			flagSoundEnd=m+1; #5 is dutarion of sound
+			flagSoundEnd=m+2; #5 is dutarion of sound
 			#Start extrern audio system
 			#call init external sound system
 			hardwareOn()
