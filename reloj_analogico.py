@@ -84,7 +84,7 @@ def tiempo():
 	
 	eventSounds(h,m,s)
 	canvas.after(1000,tiempo)
-def timeCondition(ho,m,s):
+def timeCondition(h,m,s):
 	#variable answer
 	answer="No"
 	if(m==0):
