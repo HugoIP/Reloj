@@ -143,14 +143,6 @@ def timeCondition(h,m,s):
 	if((h>=4) and h<22):
 		if(m==30):
 			answer ="HALF.mp3"
-	if(m==34):
-			answer ="30m.mp3"
-	if(m==45):
-			answer ="15m.mp3"
-	if(m==50):
-			answer ="TEST.mp3"
-	if(m==55):
-			answer ="5M.mp3"
 	return answer
 
 def hardwareOn():
